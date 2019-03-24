@@ -1,0 +1,33 @@
+<hr>
+<button routerLink="/new-autor">Nuevo Autor</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<button routerLink="/modificar-autor">Modificar Autor</button>
+  <div class="panel-body">
+    <table class="table table-striped">
+      <thead>
+      <tr>
+          <th>id</th>
+        <th>Nombre</th>
+        <th>Apellido</th>
+      
+       
+      </tr>
+      
+      <tr *ngFor="let user of users">
+          
+          <td>{{user.id}}</td>
+          <td>{{user.name}}</td>
+          <td>{{user.surname}}</td>
+        
+          <td><button (click)="deleteAutor(user.id)">Borrar autor</button>
+          </td>
+               
+          </tr>
+        
+      </thead>
+      <tbody>
+   
+      </tbody>
+    </table>
+    
+         
+  </div>

@@ -1,0 +1,27 @@
+<div class="container" >
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="#">Publicaciones Cientificas </a>
+          </div>
+          <ul class="nav navbar-nav">
+            <li routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"><a routerLink="/Home">Home</a></li>
+
+            <li routerLinkActive="active"><a  *ngIf="!_auth.isLoggedIn()" routerLink="/register">Registrar</a></li>
+            <li  routerLinkActive="active"><a  *ngIf="!_auth.isLoggedIn()" routerLink="/login">Login</a></li> 
+            <li  routerLinkActive="active"><a  *ngIf="_auth.isLoggedIn()" routerLink="/autores">Autores</a></li>
+            <li  routerLinkActive="active"><a  *ngIf="_auth.isLoggedIn()" routerLink="/articulorevista">Articulo Revista</a></li>
+            <li><a *ngIf="_auth.isLoggedIn()" href="javascript:void(0)" (click)="doLogout()">Logout</a></li>
+         
+            
+
+            
+          </ul>
+        </div>
+      </nav>
+      
+      
+    <router-outlet></router-outlet>
+    
+ 
+    </div>

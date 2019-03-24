@@ -1,0 +1,32 @@
+<div class="container">
+  <div class="row">
+    <div class="col-lg-4">
+      <form (ngSubmit)="onSubmit(f)" #f="ngForm">
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" name="email" id="email" ngModel class="form-control" required>
+        </div>
+
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" name="password" id="password" ngModel class="form-control" required>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Login</button>
+
+      </form>
+  
+        
+    
+    </div>
+  </div>
+  <br />
+  <div class="row message-row" *ngIf="emailVerificationMessage">
+    <div class="col-lg-8">
+      <div class="alert alert-danger">
+          No se pudo iniciar sesión. Verifique su correo electrónico e intente iniciar sesión.
+      </div>
+    </div>
+  </div>
+</div>

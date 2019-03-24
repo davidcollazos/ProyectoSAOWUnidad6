@@ -1,0 +1,50 @@
+<h3>Modificar publicacion</h3>
+
+<form>
+  <p>Por favor escriba en el campo identificador uno de los siguientes identificadores que se muestran en el selector</p>
+  <p>Nota importante: Si usted pone un id que no está en el selector se creará una nueva publicacion</p>
+  
+   <div class="form-group">
+    
+    <label for="id">Identificadores existentes</label>
+    
+      <select >
+     
+      <option  *ngFor="let user of users" name="id"  value="{{user.id}}">{{user.id}}</option>
+       
+      </select>
+    </div>
+
+
+    <div class="form-group">
+        <label for="id">Identificador</label>
+        <input type="text" name="id" [(ngModel)]="user.id">
+        </div>
+
+
+<div class="form-group">
+<label for="autorId">Autores</label>
+<input type="text" name="autorId" [(ngModel)]="user.autorId">
+</div>
+<div class="form-group">
+<label for="titulo">Titulo</label>
+<input type="text" name="titulo" [(ngModel)]="user.titulo">
+</div>
+<div class="form-group">
+<label for="revista">Revista</label>
+<input type="text" name="revista" [(ngModel)]="user.revista">
+</div>
+<div class="form-group">
+  <label for="issn">Issn</label>
+  <input type="text" name="issn" [(ngModel)]="user.issn">
+  </div>
+  <div class="form-group">
+    <label for="anyo">Año</label>
+    <input type="text" name="anyo" [(ngModel)]="user.anyo">
+    </div>
+
+<div class="form-group">
+<button type="submit" (click)="Modificar()">Modificar</button>
+</div>
+
+</form>    

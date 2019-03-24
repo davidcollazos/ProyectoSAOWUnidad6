@@ -1,0 +1,38 @@
+<h3>Modificar autor</h3>
+
+<form>
+  <p>Por favor escriba en el campo identificador uno de los siguientes identificadores que se muestran en el selector</p>
+  <p>Nota importante: Si usted pone un id que no está en el selector se creará una nuevo autor</p>
+  
+   <div class="form-group">
+    
+    <label for="id">Identificadores existentes</label>
+    
+      <select >
+     
+      <option  *ngFor="let user of users" name="id"  value="{{user.id}}">{{user.id}}</option>
+       
+      </select>
+    </div>
+
+
+    <div class="form-group">
+        <label for="id">Identificador</label>
+        <input type="text" name="id" [(ngModel)]="user.id">
+        </div>
+
+
+<div class="form-group">
+<label for="name">Nombre</label>
+<input type="text" name="name" [(ngModel)]="user.name">
+</div>
+<div class="form-group">
+<label for="surname">Apellidos</label>
+<input type="text" name="surname" [(ngModel)]="user.surname">
+</div>
+
+<div class="form-group">
+<button type="submit" (click)="ModificarAutor()">Modificar</button>
+</div>
+
+</form>    
